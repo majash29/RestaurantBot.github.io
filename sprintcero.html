@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sprint 00</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/sliders.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>UAM </strong>Procesos &Aacute;giles de Desarrollo de Software</a>
+										<div align="right"><img src="images/logo_uam.jpg" alt="logo" width="336" height="69"> </div>
+								</header>
+
+	<!-- Aqui -->
+							<section>
+								<header class="main">
+									<h1>Sprint 00</h1>
+									<p><em>&#40;Del 08 al 10 de febrero de 2021&#41;</em></p>
+								</header>
+									<h2>Objetivo</h2>
+									<p align="justify">Configurar el espacio de trabajo y los componentes base para el ejecuci&oacute;n de cada uno de los sprint definidos para el proyecto.</p>
+									
+									<hr class="major" />
+								
+									<h2>Definici&oacute;n de DONE para el Sprint</h2>
+									<p align="justify">Cada integrante del equipo cumple con la configuraci&oacute;n base para el desarrollo del BOT, relacionado con la instalaci&oacute;n de las herramientas y el entendimiento del negocio.</p>
+									
+									<hr class="major" />
+								
+									<h2>Tareas del Sprint</h2>
+								
+									<p align="justify">
+									<div><input type="checkbox" id="tsu1" name="tsu1" checked><label for="tsu1">Creaci&oacute;n del repositorio remoto. - <strong>Tiempo: </strong>1 d&iacute;a</label></div>
+								
+									<div><input type="checkbox" id="tsu2" name="tsu2" checked><label for="tsu2">Creaci&oacute;n del tablero de los Sprints. - <strong>Tiempo: </strong>1 d&iacute;a</label></div>
+								
+									<div><input type="checkbox" id="tsu3" name="tsu3" checked><label for="tsu3">Instalaci&oacute;n de las herramientas de desarrollo. - <strong>Tiempo: </strong>1 d&iacute;a</label></div>
+								
+									<div><input type="checkbox" id="tsu4" name="tsu4" checked><label for="tsu4">Dise&ntilde;o del BOT - <strong>Tiempo: </strong>1 d&iacute;a</label></div>
+								
+									<div><input type="checkbox" id="tsu5" name="tsu5" checked><label for="tsu5">Refinamiento del modelo entidad relaci&oacute;n. - <strong>Tiempo: </strong>1 d&iacute;a</label></div>
+									
+									<div><input type="checkbox" id="tsu6" name="tsu6" checked><label for="tsu6">Registro del BOT en Telegram. - <strong>Tiempo: </strong>1 d&iacute;a</label></div>
+								
+									<div><input type="checkbox" id="tsu7" name="tsu7" checked><label for="tsu7">Implementaci&oacute;n Base del BOT. - <strong>Tiempo: </strong>1 d&iacute;a</label></div>
+									
+									<div><input type="checkbox" id="tsu8" name="tsu8" checked><label for="tsu8">Refinamiento de las Historias de Usuario. - <strong>Tiempo: </strong>1 d&iacute;a</label></div>
+									</p>
+									
+									<hr class="major" />
+								
+									<h2>Tablero Inicial del Sprint</h2>
+
+									<div class="slideshow-container">
+									  <div class="mySlides1">
+										<img src="proyecto/ini00sprt01.jpg" style="width:100%">
+									  </div>
+
+									  <div class="mySlides1">
+										<img src="proyecto/ini00sprt02.jpg" style="width:100%">
+									  </div>
+
+									  <div class="mySlides1">
+										<img src="proyecto/ini00sprt03.jpg" style="width:100%">
+									  </div>
+
+									  <div class="mySlides1">
+										<img src="proyecto/ini00sprt04.jpg" style="width:100%">
+									  </div>
+
+									  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+									  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+									</div>
+
+									<hr class="major" />
+								
+									<h2>Tablero de Cambios del Sprint</h2>
+							
+									<div class="slideshow-container">
+									  <div class="mySlides2">
+										<img src="proyecto/fin00sprt01.jpg" style="width:100%">
+										<div class="text">Cambios del 09 de febrero de 2021</div>
+									  </div>
+
+									  <div class="mySlides2">
+										<img src="proyecto/fin00sprt02.jpg" style="width:100%">
+										<div class="text">Cambios del 09 de febrero de 2021</div>
+									  </div>
+
+									  <div class="mySlides2">
+										<img src="proyecto/fin00sprt03.jpg" style="width:100%">
+										  <div class="text">Cambios del 10 de febrero de 2021</div>
+									  </div>
+										
+									  <div class="mySlides2">
+										<img src="proyecto/fin00sprt04.jpg" style="width:100%">
+										  <div class="text">Cambios del 10 de febrero de 2021</div>
+									  </div>
+
+									  <div class="mySlides2">
+										<img src="proyecto/fin00sprt05.jpg" style="width:100%">
+										  <div class="text">Cambios del 10 de febrero de 2021</div>
+									  </div>
+										
+									  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+									  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+									</div>
+
+									<script>
+									var slideIndex = [1,1];
+									var slideId = ["mySlides1", "mySlides2"]
+									showSlides(1, 0);
+									showSlides(1, 1);
+
+									function plusSlides(n, no) {
+									  showSlides(slideIndex[no] += n, no);
+									}
+
+									function showSlides(n, no) {
+									  var i;
+									  var x = document.getElementsByClassName(slideId[no]);
+									  if (n > x.length) {slideIndex[no] = 1}    
+									  if (n < 1) {slideIndex[no] = x.length}
+									  for (i = 0; i < x.length; i++) {
+										 x[i].style.display = "none";  
+									  }
+									  x[slideIndex[no]-1].style.display = "block";  
+									}
+									</script>
+							
+							
+									<hr class="major" />
+								
+									<h2>Retrospectiva del Sprint</h2>
+							
+									<h4>Aspectos Positivos</h4>
+									<p align="justify">El equipo concluye que se cumplio con el objetivo del Sprint, debido a que se ejecutaron todas las tareas propuestas para el mismo, adicionalmente el equipo se encuentra con una motivación positiva para continuar con el siguiente sprint. Adicionalmente resalta la inclusión de un sprint base como una excelente estrategia de equipo para un mayor acoplamiento.</p>
+							
+									<h4>Aspectos de Mejora</h4>
+									<p align="justify">
+										<ul>
+											<li>Mejorar la t&eacute;cnica de estimaci&oacute;n del tiempo para cada una de las tareas propuestas.</li>
+											<li>Solo una persona gestione el tablero y las tareas que se registran en el tablero de GitHub para una mejor organizaci&oacute;n y presentaci&oacute;n.</li>
+											<li>Utilizaci&oacute;n de un mismo estandar de codificaci&oacute;n para el nombramiento de los documentos y archivos.</li>
+										</ul></p>
+						
+									<div class="row">
+									  <div class="col-6 col-12-medium">
+												<h3>Estado de Motivaci&oacute;n</h3>
+										  <span class="image main"><img src="proyecto/niko00.JPG" alt="niko"/></span>
+										</div>
+						
+											<div class="col-6 col-12-medium">
+												<h3>Burndown Chart</h3>
+												<span class="image main"><img src="proyecto/bcsprint00.jpg" alt="chart" /></span>
+											</div>
+									</div>
+								</section>
+							
+	<!-- Aqui -->
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Search -->
+								<div align="right"><img src="images/logo.png" alt="logo" width="200" height="100"> </div>
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>@PedidosRestauranteUAMBot</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Inicio</a></li>
+										<li><a href="elemntdisg.html">Elementos Dise&ntilde;o</a></li>
+										<li><a href="sprintcero.html">Sprint 00</a></li>
+										<li><a href="sprintuno.html">Sprint 01</a></li>
+										<li><a href="sprintdos.html">Sprint 02</a></li>
+										<li><a href="elemntcal.html">Elementos Calidad</a></li>
+										<li><a href="botuam.html">BOT Restaurante UAM</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Equipo de Trabajo</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"> Alvaro P&eacute;rez N</li>
+										<li class="icon solid fa-envelope"> Andres Felipe Quintero</li>
+										<li class="icon solid fa-envelope"> Hernando Augusto Roman</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; UAM. All rights reserved. <br>Febrero de 2021</p>
+								</footer>
+						</div>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

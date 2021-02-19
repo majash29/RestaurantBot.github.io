@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Elementos Calidad</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>UAM </strong>Procesos &Aacute;giles de Desarrollo de Software</a>
+										<div align="right"><img src="images/logo_uam.jpg" alt="logo" width="336" height="69"> </div>
+								</header>
+
+	<!-- Aqui -->
+							<section>
+								<header class="main">
+									<h1>Elementos de Calidad</h1>
+								</header>
+									<h2>Refactorizaci&oacute;n 01</h2>
+
+									<span class="image main"><img src="proyecto/refac01.JPG" alt="prototipo" /></span>
+									
+									<!-- Preformatted Code -->
+									<h3>Codigo de la Refactorizaci&oacute;n 01</h3>
+									<pre><code>
+#########################################################
+# Agregar los Productos al Carrito de Compra - US03
+
+def add_basket(user_id, index, quantity):
+
+    order = getUserBasket(user_id)
+
+    if not order:
+        createBasket(user_id)
+        order = getUserBasket(user_id)
+
+    item = getItemById(index, user_id)
+
+    if item and item.status == Item.ITEM_ACTIVE:
+        
+        #Refactorizacion "Extract Function"
+        #URL: https://refactoring.com/catalog/extractFunction.html
+
+        #######################################################
+
+        # Codigo Inicial sin la Refactorizacion
+        #order.amount = order.amount + item.value
+        # Add the order item
+        #orderItem = OrderItem(item.id, order.id)
+        #db.session.add(orderItem)
+        #db.session.commit()
+
+        #Codigo Refactorizado No.01
+        add_item_to_order(order, item, quantity)
+        return item
+    return False
+									
+									</code></pre>
+								
+									<hr class="major" />
+
+									<h2>Refactorizacion 02 y 03</h2>
+								
+									<span class="image main"><img src="proyecto/refac02.JPG" alt="prototipo" /></span>
+								
+									<!-- Preformatted Code -->
+									<h3>Codigo de la Refactorizaci&oacute;n 02 y 03</h3>
+									<pre><code>
+#########################################################
+# Eliminar Plato del Carrito de Compra - US05
+
+def delete_item_from_basket(user_id, index):
+    order = getUserBasket(user_id)
+    
+    #Refactorizacion "Extract Function"
+    #URL: https://refactoring.com/catalog/extractFunction.html
+    #######################################################
+    #Codigo Antiguo
+    # orderItem = db.session.query(
+    #     OrderItem
+    #     ).filter_by(
+    #         order_id = order.id
+    #     ).filter_by(
+    #         id = index
+    #     ).first()
+
+    #Codigo Refactorizado No.02
+    orderItem = getOrderItemById(index, user_id)
+    item = getItemById(orderItem.item_id, user_id)
+    order.amount = order.amount - (item.value * orderItem.quantity)
+
+    #Codigo Antigio
+    # orderItem = db.session.query(
+    #     OrderItem
+    #     ).filter_by(
+    #         order_id = order.id
+    #     ).filter_by(
+    #         id = index
+    #     ).delete()
+    
+    #Codigo Refactorizado No.03
+    orderItem = delete_order_item_by_id(order, index)
+    
+    db.session.commit()
+    return orderItem
+
+def get_user_orders(user_id):
+    orders = db.session.query(
+        Order
+        ).filter_by(
+            user_id = user_id
+        ).filter(
+            Order.status > 0
+        ).all()
+    db.session.commit()
+    return orders
+									
+									</code></pre>
+								
+							
+									<hr class="major" />
+
+									<h2>Pruebas del BOT</h2>
+									
+									<hr class="major" />
+								
+									<h2>Definici&oacute;n de DONE para el Proyecto</h2>
+									<p align="justify"><ul>
+										<li>Todas las pruebas unitarias y funcionales son correctas.</li>
+										<li>Todos los criterios de aceptaci&oacute;n se deben cumplir.</li>
+										<li>La codificación desarrollada no presenta bugs en su ejecuci&oacute;n.</li>
+										<li>Contar con el VoBo un&aacute;nime del equipo de trabajo.</li>
+										<li>La tarea debe haber sido puesta en producci&oacute;n o haberse hecho la petición de pase a producci&oacute;n.</li>
+										<li>El trabajo de cada miembro del equipo ha sido revisado por al menos otro miembro del equipo.</li>
+										<li>El c&oacute;digo tiene que estar documentado.</li>
+									</ul></p>
+								
+								
+								
+								</section>
+							
+	<!-- Aqui -->
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Search -->
+								<div align="right"><img src="images/logo.png" alt="logo" width="200" height="100"> </div>
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>@PedidosRestauranteUAMBot</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Inicio</a></li>
+										<li><a href="elemntdisg.html">Elementos Dise&ntilde;o</a></li>
+										<li><a href="sprintcero.html">Sprint 00</a></li>
+										<li><a href="sprintuno.html">Sprint 01</a></li>
+										<li><a href="sprintdos.html">Sprint 02</a></li>
+										<li><a href="elemntcal.html">Elementos Calidad</a></li>
+										<li><a href="botuam.html">BOT Restaurante UAM</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Equipo de Trabajo</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"> Alvaro P&eacute;rez N</li>
+										<li class="icon solid fa-envelope"> Andres Felipe Quintero</li>
+										<li class="icon solid fa-envelope"> Hernando Augusto Roman</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; UAM. All rights reserved. <br>Febrero de 2021</p>
+								</footer>
+						</div>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

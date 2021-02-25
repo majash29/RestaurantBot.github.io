@@ -131,6 +131,179 @@ def get_user_orders(user_id):
 									<hr class="major" />
 
 									<h2>Pruebas del BOT</h2>
+									<table border="1" cellspacing="0" cellpadding="0" width="602">
+									  <tr>
+									    <td width="50" valign="top"><p align="center"><strong>ID</strong></p></td>
+									    <td width="73" valign="top"><p align="center"><strong>Historia de Usuario</strong></p></td>
+									    <td width="127" valign="top"><p align="center"><strong>Descripción</strong></p></td>
+									    <td width="107" valign="top"><p align="center"><strong>Valores de Entrada</strong></p></td>
+									    <td width="126" valign="top"><p align="center"><strong>Resultados Esperados</strong></p></td>
+									    <td width="119" valign="top"><p align="center"><strong>Resultado Ejecución</strong></p></td>
+								      </tr>
+									  <tr>
+									    <td width="50" valign="top"><p align="center">CP01</p></td>
+									    <td width="73" valign="top"><p align="center">US02.1</p></td>
+									    <td width="127" valign="top"><p>Adicionar platos al sistema.</p></td>
+									    <td width="107" valign="top"><p><strong>Comando:</strong> NP <strong>Nombre: </strong>perro<br>
+									      <strong>Valor:</strong> 5000</p></td>
+									    <td width="126" valign="top"><p>El sistema debe mostrar en pantalla el mensaje &ldquo;<strong>Plato Agregado</strong>&rdquo;</p></td>
+									    <td width="119" valign="top"><p>El sistema mostró en pantalla el mensaje &ldquo;<strong>Plato Agregado</strong>&rdquo;</p></td>
+								      </tr>
+									  <tr>
+									    <td width="50" valign="top"><p align="center">CP02</p></td>
+									    <td width="73" valign="top"><p align="center">US02.1</p></td>
+									    <td width="127" valign="top"><p>Adicionar platos al sistema.</p></td>
+									    <td width="107" valign="top"><p><strong>Comando:</strong> NP <strong>Nombre:</strong> perro<br>
+									      <strong>Valor:</strong> A5000</p></td>
+									    <td width="126" valign="top"><p>El sistema debe mostrar en pantalla el mensaje &ldquo;<strong>No entendí lo que me acabas de decir</strong>&rdquo;</p></td>
+									    <td width="119" valign="top"><p>El sistema mostró en pantalla el mensaje &ldquo;<strong>No entendí lo que me acabas de decir</strong>&rdquo;</p></td>
+								      </tr>
+									  <tr>
+									    <td width="50" valign="top"><p align="center">CP03</p></td>
+									    <td width="73" valign="top"><p align="center">US01</p></td>
+									    <td width="127" valign="top"><p>Listar platos para ser consultados</p></td>
+									    <td width="107" valign="top"><p><strong>Comando:</strong> VP</p></td>
+									    <td width="126" valign="top"><p>El sistema debe mostrar en pantalla los campos Id, nombre del plato,    valor del plato y estado del plato</p></td>
+									    <td width="119" valign="top"><p>El sistema mostró en pantalla los campos Id, nombre del plato, valor    del plato y estado del plato</p></td>
+								      </tr>
+									  <tr>
+									    <td width="50" valign="top"><p align="center">CP04</p></td>
+									    <td width="73" valign="top"><p align="center">US01</p></td>
+									    <td width="127" valign="top"><p>Listar platos para ser consultados</p></td>
+									    <td width="107" valign="top"><p><strong>Comando:</strong> BP</p></td>
+									    <td width="126" valign="top"><p>El sistema debe mostrar en pantalla el mensaje &ldquo;<strong>No entendí lo que me acabas de decir</strong>&rdquo;</p></td>
+									    <td width="119" valign="top"><p>El sistema mostró en pantalla el mensaje &ldquo;<strong>No entendí lo que me acabas de decir</strong>&rdquo;</p></td>
+								      </tr>
+									  <tr>
+									    <td width="50" valign="top"><p align="center">CP05</p></td>
+									    <td width="73" valign="top"><p align="center">US03</p></td>
+									    <td width="127" valign="top"><p>Agregar platos al carrito de compra</p></td>
+									    <td width="107" valign="top"><p><strong>Comando: </strong>HP<br>
+									      <strong>Índice del Plato:</strong> 1<br>
+									      <strong>Cantidad:</strong> 2</p></td>
+									    <td width="126" valign="top"><p>El sistema debe multiplicar la cantidad por el valor del plato y    mostrar en pantalla el mensaje &ldquo;<strong>Hemos    agregado el plato: perro por $10000.0 a tu pedido</strong>&rdquo;</p></td>
+									    <td width="119" valign="top"><p>El sistema multiplicó la cantidad por el valor del plato y mostrar en    pantalla el mensaje &ldquo;<strong>Hemos agregado el plato: perro por $10000.0 a tu pedido</strong>&rdquo;</p></td>
+								      </tr>
+									  <tr>
+									    <td width="50" valign="top"><p align="center">CP06</p></td>
+									    <td width="73" valign="top"><p align="center">US03</p></td>
+									    <td width="127" valign="top"><p>Agregar platos al carrito de compra</p></td>
+									    <td width="107" valign="top"><p><strong>Comando:</strong> HP<br>
+									      <strong>Índice del Plato: </strong>A<br>
+									      <strong>Cantidad:</strong> 2</p></td>
+									    <td width="126" valign="top"><p>El sistema debe mostrar en pantalla el mensaje &ldquo;<strong>No entendí lo que me acabas de decir</strong>&rdquo;</p></td>
+									    <td width="119" valign="top"><p>El sistema mostró en pantalla el mensaje &ldquo;<strong>No entendí lo que me acabas de decir</strong>&rdquo;</p></td>
+								      </tr>
+									  <tr>
+									    <td width="50" valign="top"><p align="center">CP07</p></td>
+									    <td width="73" valign="top"><p align="center">US04</p></td>
+									    <td width="127" valign="top"><p>Listar platos del carrito</p></td>
+									    <td width="107" valign="top"><p><strong>Comando:</strong> P</p></td>
+									    <td width="126" valign="top"><p>El sistema debe mostrar en pantalla los campos Id, nombre del plato,    valor del plato y cantidad ordenada del plato. <br>
+									      <strong>Nota: </strong>Al final de la pantalla el sistema debe mostrar el mensaje &ldquo;<strong>El total de tu pedido es: $</strong>&rdquo; el    sistema debe multiplicar la cantidad ordenada de cada plato por el valor del    plato y realizar una sumatoria de todos los ítems ordenados.</p></td>
+									    <td width="119" valign="top"><p>El sistema mostró en pantalla los campos Id, nombre del plato, valor    del plato y cantidad ordenada del plato. <br>
+									      <strong>Nota: </strong>Al final de la pantalla el sistema mostró el mensaje &ldquo;<strong>El total de tu pedido es: $</strong>&rdquo; y    multiplicó la cantidad ordenada de cada plato por el valor del plato y    realizó la sumatoria de todos los ítems ordenados.</p></td>
+								      </tr>
+									  <tr>
+									    <td width="50" valign="top"><p align="center">CP08</p></td>
+									    <td width="73" valign="top"><p align="center">US04</p></td>
+									    <td width="127" valign="top"><p>Listar platos del carrito</p></td>
+									    <td width="107" valign="top"><p><strong>Comando:</strong> P1</p></td>
+									    <td width="126" valign="top"><p>El sistema debe mostrar en pantalla el mensaje &ldquo;<strong>No entendí lo que me acabas de decir</strong>&rdquo;</p></td>
+									    <td width="119" valign="top"><p>El sistema mostró en pantalla el mensaje &ldquo;<strong>No entendí lo que me acabas de decir</strong>&rdquo;</p></td>
+								      </tr>
+									  <tr>
+									    <td width="50" valign="top"><p align="center">CP09</p></td>
+									    <td width="73" valign="top"><p align="center">US06</p></td>
+									    <td width="127" valign="top"><p>Comprar platos listados del carrito</p></td>
+									    <td width="107" valign="top"><p><strong>Comando:</strong> C</p></td>
+									    <td width="126" valign="top"><p>El sistema debe mostrar en pantalla el mensaje &ldquo;<strong>Felicitaciones has comprado tu pedido por valor de $</strong>&rdquo; El sistema    debe calcular el valor total del pedido multiplicando la cantidad ordenada de    cada plato por el valor del plato y realizar una sumatoria de todos los ítems    ordenados, &ldquo;<strong>Vamos a comenzar a    prepararlo</strong>&rdquo;</p></td>
+									    <td width="119" valign="top"><p>El sistema mostró en pantalla el mensaje &ldquo;<strong>Felicitaciones has comprado tu pedido por valor de $</strong>&rdquo; El sistema    calculó el valor total del pedido multiplicando la cantidad ordenada de cada    plato por el valor del plato y realizar una sumatoria de todos los ítems    ordenados, &ldquo;<strong>Vamos a comenzar a    prepararlo</strong>&rdquo;</p></td>
+								      </tr>
+									  <tr>
+									    <td width="50" valign="top"><p align="center">CP10</p></td>
+									    <td width="73" valign="top"><p align="center">US06</p></td>
+									    <td width="127" valign="top"><p>Comprar platos listados del carrito</p></td>
+									    <td width="107" valign="top"><p><strong>Comando:</strong> C1</p></td>
+									    <td width="126" valign="top"><p>El sistema debe mostrar en pantalla el mensaje &ldquo;<strong>No entendí lo que me acabas de decir</strong>&rdquo;</p></td>
+									    <td width="119" valign="top"><p>El sistema mostró en pantalla el mensaje &ldquo;<strong>No entendí lo que me acabas de decir</strong>&rdquo;</p></td>
+								      </tr>
+									  <tr>
+									    <td width="50" valign="top"><p align="center">CP11</p></td>
+									    <td width="73" valign="top"><p align="center">USO5</p></td>
+									    <td width="127" valign="top"><p>Eliminar los platos del carrito</p></td>
+									    <td width="107" valign="top"><p><strong>Comando:</strong> EPP<br>
+									      <strong>Índice del Plato:</strong> 1<br>
+									      </p></td>
+									    <td width="126" valign="top"><p>El sistema debe mostrar en pantalla el mensaje &ldquo;<strong>Hemos eliminado el plato de tu pedido</strong>&rdquo;</p></td>
+									    <td width="119" valign="top"><p>El sistema mostró en pantalla el mensaje &ldquo;<strong>Hemos eliminado el plato de tu pedido</strong>&rdquo;</p></td>
+								      </tr>
+									  <tr>
+									    <td width="50" valign="top"><p align="center">CP12</p></td>
+									    <td width="73" valign="top"><p align="center">USO5</p></td>
+									    <td width="127" valign="top"><p>Eliminar los platos del carrito</p></td>
+									    <td width="107" valign="top"><p><strong>Comando:</strong> EPP<br>
+									      <strong>Índice del Plato:</strong> A<br>
+									      </p></td>
+									    <td width="126" valign="top"><p>El sistema debe mostrar en pantalla el mensaje &ldquo;<strong>No entendí lo que me acabas de decir</strong>&rdquo;</p></td>
+									    <td width="119" valign="top"><p>El sistema mostró en pantalla el mensaje &ldquo;<strong>No entendí lo que me acabas de decir</strong>&rdquo;</p></td>
+								      </tr>
+									  <tr>
+									    <td width="50" valign="top"><p align="center">CP13</p></td>
+									    <td width="73" valign="top"><p align="center">US07</p></td>
+									    <td width="127" valign="top"><p>Listar el historial de compra</p></td>
+									    <td width="107" valign="top"><p><strong>Comando:</strong> H</p></td>
+									    <td width="126" valign="top"><p>El sistema debe mostrar en pantalla los campos nombre del plato, valor    del plato y cantidad ordenada del plato.<br>
+									      <strong>Nota: </strong>Al final de la pantalla el sistema debe mostrar el mensaje &ldquo;<strong>El total de tus pedidos es: $</strong>&rdquo; el    sistema debe multiplicar la cantidad ordenada de cada plato por el valor del    plato y realizar una sumatoria de todo el histórico de los ítems ordenados.</p></td>
+									    <td width="119" valign="top"><p>El sistema mostró en pantalla los campos nombre del plato, valor del    plato y cantidad ordenada del plato.<br>
+									      <strong>Nota:</strong> Al final de la pantalla el sistema mostró el mensaje &ldquo;<strong>El total de tus pedidos es: $</strong>&rdquo; el    sistema debe multiplicar la cantidad ordenada de cada plato por el valor del    plato y realizar una sumatoria de todo el histórico de los ítems ordenados.</p></td>
+								      </tr>
+									  <tr>
+									    <td width="50" valign="top"><p align="center">CP14</p></td>
+									    <td width="73" valign="top"><p align="center">US07</p></td>
+									    <td width="127" valign="top"><p>Listar el historial de compra</p></td>
+									    <td width="107" valign="top"><p><strong>Comando:</strong> H1</p></td>
+									    <td width="126" valign="top"><p>El sistema debe mostrar en pantalla el mensaje &ldquo;<strong>No entendí lo que me acabas de decir</strong>&rdquo;</p></td>
+									    <td width="119" valign="top"><p>El sistema mostró en pantalla el mensaje &ldquo;<strong>No entendí lo que me acabas de decir</strong>&rdquo;</p></td>
+								      </tr>
+									  <tr>
+									    <td width="50" valign="top"><p align="center">CP15</p></td>
+									    <td width="73" valign="top"><p align="center">US02.2</p></td>
+									    <td width="127" valign="top"><p>Activar los platos del sistema</p></td>
+									    <td width="107" valign="top"><p><strong>Comando:</strong> AP<br>
+									      <strong>Índice:</strong> 1</p></td>
+									    <td width="126" valign="top"><p>El sistema debe mostrar en pantalla el mensaje &ldquo;<strong>Hemos activado el plato en el menú</strong>&rdquo;</p></td>
+									    <td width="119" valign="top"><p>El sistema mostró en pantalla el mensaje &ldquo;<strong>Hemos activado el plato en el menú</strong>&rdquo;</p></td>
+								      </tr>
+									  <tr>
+									    <td width="50" valign="top"><p align="center">CP16</p></td>
+									    <td width="73" valign="top"><p align="center">US02.2</p></td>
+									    <td width="127" valign="top"><p>Activar los platos del sistema</p></td>
+									    <td width="107" valign="top"><p><strong>Comando:</strong> AP<br>
+									      <strong>Índice: </strong>1A</p></td>
+									    <td width="126" valign="top"><p>El sistema debe mostrar en pantalla el mensaje &ldquo;<strong>No entendí lo que me acabas de decir</strong>&rdquo;</p></td>
+									    <td width="119" valign="top"><p>El sistema mostró en pantalla el mensaje &ldquo;<strong>No entendí lo que me acabas de decir</strong>&rdquo;</p></td>
+								      </tr>
+									  <tr>
+									    <td width="50" valign="top"><p align="center">CP17</p></td>
+									    <td width="73" valign="top"><p align="center">US02.3</p></td>
+									    <td width="127" valign="top"><p>Inactivar los platos del sistema</p></td>
+									    <td width="107" valign="top"><p><strong>Comando:</strong> IP<br>
+									      <strong>Índice: </strong>1</p></td>
+									    <td width="126" valign="top"><p>El sistema debe mostrar en pantalla el mensaje &ldquo;<strong>Hemos desactivado el plato en el menú</strong>&rdquo;</p></td>
+									    <td width="119" valign="top"><p>El sistema mostró en pantalla el mensaje &ldquo;<strong>Hemos desactivado el plato en el menú</strong>&rdquo;</p></td>
+								      </tr>
+									  <tr>
+									    <td width="50" valign="top"><p align="center">CP18</p></td>
+									    <td width="73" valign="top"><p align="center">US02.3</p></td>
+									    <td width="127" valign="top"><p>Inactivar los platos del sistema</p></td>
+									    <td width="107" valign="top"><p><strong>Comando:</strong> IP<br>
+									      <strong>Índice:</strong> 1A</p></td>
+									    <td width="126" valign="top"><p>El sistema debe mostrar en pantalla el mensaje &ldquo;<strong>No entendí lo que me acabas de decir</strong>&rdquo;</p></td>
+									    <td width="119" valign="top"><p>El sistema mostró en pantalla el mensaje &ldquo;<strong>No entendí lo que me acabas de decir</strong>&rdquo;</p></td>
+								      </tr>
+							  </table>
+<p>&nbsp;</p>
 									
 									<hr class="major" />
 								
